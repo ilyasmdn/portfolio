@@ -93,6 +93,3 @@ Please ensure that your changes follow the existing style guide and include test
 - [Lucide React Documentation](https://lucide.dev/)
 - [GitHub Pages Documentation](https://pages.github.com/)
 - [Shadcn/ui Documentation](https://ui.shadcn.com/)
-
-## License
-
