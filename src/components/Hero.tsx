@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex flex-col-reverse md:flex-row justify-around items-center gap-8 md:gap-12 min-h-screen pb-12 pt-20"
+      className="flex flex-col-reverse md:flex-row justify-around items-center gap-8 md:gap-12 min-h-screen pb-12 pt-20 w-full"
     >
       <div className="flex flex-col max-w-full md:max-w-1/2 gap-4 md:gap-6">
         <h1 className="text-text text-3xl md:text-4xl font-extrabold text-center md:text-left">
