@@ -113,7 +113,7 @@ export default function Timeline() {
               >
                 <Card className="bg-background border border-secondary shadow-lg">
                   <CardHeader>
-                    <CardTitle className="text-primary">{item.title}</CardTitle>
+                    <CardTitle className="text-accent">{item.title}</CardTitle>
                     <CardDescription className="text-secondary">
                       {item.institution} • {item.year}
                     </CardDescription>
@@ -124,7 +124,7 @@ export default function Timeline() {
                     </div>
 
                     <div>
-                      <h4 className="text-sm font-medium text-primary mb-2">
+                      <h4 className="text-sm font-medium text-accent mb-2">
                         {language === "en" ? "Achievements" : "Réalisations"}
                       </h4>
                       <ul className="list-disc pl-5 space-y-1 text-text">
@@ -137,7 +137,7 @@ export default function Timeline() {
                     </div>
 
                     <div>
-                      <h4 className="text-sm font-medium text-primary mb-2">
+                      <h4 className="text-sm font-medium text-accent mb-2">
                         {language === "en" ? "Skills" : "Compétences"}
                       </h4>
                       <div className="flex flex-wrap gap-2">

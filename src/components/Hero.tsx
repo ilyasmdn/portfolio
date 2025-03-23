@@ -14,13 +14,13 @@ const Hero = () => {
       id="home"
       className="flex flex-col-reverse md:flex-row justify-around items-center gap-8 md:gap-12 min-h-screen pb-12 pt-20 w-full"
     >
-      <div className="flex flex-col max-w-full md:max-w-1/2 gap-4 md:gap-6">
+      <div className="flex flex-col max-w-full md:max-w-1/2 gap-2 md:gap-3">
         <h1 className="text-text text-3xl md:text-4xl font-extrabold text-center md:text-left">
           {title}
-          <span className="text-primary">Ilyas</span>
+          <span className="text-accent">Ilyas</span>
         </h1>
         {language === "en" ? (
-          <h2 className="text-text text-4xl text-center md:text-left md:text-5xl font-extrabold">
+          <h2 className="mb-3 text-text text-4xl text-center md:text-left md:text-5xl font-extrabold">
             {subtitle}
             <span className="text-primary">{role}</span>
           </h2>
