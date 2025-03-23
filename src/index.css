@@ -128,6 +128,18 @@
   --text-3xl: 1.954rem;
   --text-4xl: 2.442rem;
   --text-5xl: 3.053rem;
+  
+  --animate-scroll: scroll 20s linear infinite;
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
 }
 
 .header-link {
@@ -145,6 +157,12 @@
 .section-subtitle {
   @apply relative flex mr-auto items-center gap-2 text-text font-semibold text-3xl md:text-4xl mb-16 after:content-[''] after:absolute after:rounded-full after:-bottom-[3px] after:left-1/2 after:-translate-x-1/2 after:h-[5px] after:w-[95%] after:bg-accent/50;
 }
+
+.scroll-container {
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+}
+
 
 .dark {
   --color-text: #dee5ed;

@@ -82,50 +82,62 @@ export const about = {
         {
           name: "HTML",
           iconLink: html,
+          color: "#E34F26",
         },
         {
           name: "CSS",
           iconLink: css,
+          color: "#1572B6",
         },
         {
           name: "JavaScript",
           iconLink: js,
+          color: "#F7DF1E",
         },
         {
           name: "TypeScript",
           iconLink: ts,
+          color: "#3178C6",
         },
         {
           name: "React",
           iconLink: react,
+          color: "#61DAFB",
         },
         {
           name: "Tailwind CSS",
           iconLink: tailwind,
+          color: "#06B6D4",
         },
         {
           name: "Shadcn/ui",
           iconLink: shadcn,
+          color: "#000000",
         },
         {
           name: "Node.js",
           iconLink: nodejs,
+          color: "#339933",
         },
         {
           name: "Express",
           iconLink: express,
+          color: "#000000",
         },
         {
           name: "PostgreSQL",
           iconLink: postgres,
+          color: "#336791",
         },
         {
           name: "Git",
           iconLink: git,
+          color: "#F05032",
         },
         {
           name: "GitHub",
           iconLink: github,
+          color: "#181717",
         },
       ],
     },
@@ -198,6 +210,71 @@ export const about = {
             "Software Architecture",
           ],
           icon: GraduationCap,
+        },
+      ],
+    },
+        technologies: {
+      title: "Technologies",
+      list: [
+        {
+          name: "HTML",
+          iconLink: html,
+          color: "#E34F26",
+        },
+        {
+          name: "CSS",
+          iconLink: css,
+          color: "#1572B6",
+        },
+        {
+          name: "JavaScript",
+          iconLink: js,
+          color: "#F7DF1E",
+        },
+        {
+          name: "TypeScript",
+          iconLink: ts,
+          color: "#3178C6",
+        },
+        {
+          name: "React",
+          iconLink: react,
+          color: "#61DAFB",
+        },
+        {
+          name: "Tailwind CSS",
+          iconLink: tailwind,
+          color: "#06B6D4",
+        },
+        {
+          name: "Shadcn/ui",
+          iconLink: shadcn,
+          color: "#000000",
+        },
+        {
+          name: "Node.js",
+          iconLink: nodejs,
+          color: "#339933",
+        },
+        {
+          name: "Express",
+          iconLink: express,
+          color: "#000000",
+        },
+        {
+          name: "PostgreSQL",
+          iconLink: postgres,
+          color: "#336791",
+        },
+        {
+          name: "Git",
+          iconLink: git,
+          color: "#F05032",
+        },
+        {
+          name: "GitHub",
+          iconLink: github,
+          color: "#181717",
         },
       ],
     },

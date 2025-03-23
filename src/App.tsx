@@ -27,7 +27,7 @@ const App = () => {
   return (
     <>
       <Header toggleTheme={toggleTheme} theme={theme} />
-      <main className="px-8 md:px-20">
+      <main className="px-8 md:px-12 lg:px-20">
         <Hero />
         <About />
       </main>

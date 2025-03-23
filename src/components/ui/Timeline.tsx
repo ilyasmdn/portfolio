@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useContext, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -16,7 +14,7 @@ export default function Timeline() {
   // Detect if the device is mobile
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.matchMedia("(max-width: 768px)").matches)
+      setIsMobile(window.matchMedia("(max-width: 1024px)").matches)
     }
 
     // Check on initial load
@@ -53,7 +51,7 @@ export default function Timeline() {
   return (
     <div className="relative">
       {/* Timeline vertical line */}
-      <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-secondary opacity-50" />
+      <div className="absolute left-4 lg:left-1/2 transform lg:-translate-x-1/2 h-full w-0.5 bg-secondary opacity-50" />
 
       {/* Timeline items */}
       <div className="space-y-12">
@@ -61,7 +59,7 @@ export default function Timeline() {
           <div key={item.id} className="relative">
             {/* Timeline dot */}
             <div
-              className={`absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full flex items-center justify-center z-10 cursor-pointer transition-all duration-300 ${
+              className={`absolute left-4 lg:left-1/2 transform lg:-translate-x-1/2 w-8 h-8 rounded-full flex items-center justify-center z-10 cursor-pointer transition-all duration-300 ${
                 activeItem === item.id
                   ? "bg-primary text-white scale-125 shadow-lg"
                   : "bg-background text-accent border-2 border-accent hover:scale-110"
@@ -83,7 +81,7 @@ export default function Timeline() {
 
             {/* Content container */}
             <div
-              className={`ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? "md:mr-auto md:pr-12" : "md:ml-auto md:pl-12"}`}
+              className={`ml-16 lg:ml-0 lg:w-5/12 ${index % 2 === 0 ? "lg:mr-auto lg:pr-12" : "lg:ml-auto lg:pl-12"}`}
               onClick={() => handleItemClick(item.id)}
               onMouseEnter={() => handleMouseEnter(item.id)}
               onMouseLeave={handleMouseLeave}
@@ -113,7 +111,7 @@ export default function Timeline() {
                 onMouseEnter={() => handleMouseEnter(item.id)}
                 onMouseLeave={handleMouseLeave}
               >
-                <Card className="bg-background border border-secondary shadow-md">
+                <Card className="bg-background border border-secondary shadow-lg">
                   <CardHeader>
                     <CardTitle className="text-primary">{item.title}</CardTitle>
                     <CardDescription className="text-secondary">
