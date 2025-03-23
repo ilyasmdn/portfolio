@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   };
 
   return (
-    <header className="flex items-center justify-between fixed top-0 p-2 px-4 sm:px-8 md:px-12 lg:px-20 bg-background border-secondary border-b w-full z-10 transition-all duration-500">
+    <header className="flex items-center justify-between fixed top-0 p-2 px-4 sm:px-8 md:px-12 lg:px-20 bg-background border-secondary border-b w-full z-50 transition-all duration-500">
       <h1 className="text-text font-extrabold text-2xl sm:text-3xl md:text-4xl">
         IlyasDev<span className="text-primary">.</span>
       </h1>
