@@ -24,7 +24,7 @@ const About = () => {
         <BookOpen />
           {aboutContent.technologies.title}
         </h3>
-        <p className="text-text text-base text-center md:text-lg mb-6">My tech stack: the perfect mix of power, precision, and innovation.</p>
+        <p className="text-text text-base text-center md:text-lg mb-6">{aboutContent.technologies.description}</p>
         <Technologies />
       </div>
     </section>

@@ -36,7 +36,7 @@ export default function InfiniteTechScrollAlt({ technologies }: InfiniteTechScro
         }}
       >
         {duplicatedTechnologies.map((tech, index) => (
-          <img className="w-20 h-20 shrink-0 brightness-30 saturate-30 hover:brightness-100 hover:saturate-100 hover:scale-150 transition-all duration-300" key={index} src={tech.iconLink} alt={tech.name} />
+          <img className="w-14 h-14 md:w-20 md:h-20 shrink-0 md:brightness-30 md:saturate-30 md:hover:brightness-100 md:hover:saturate-100 md:hover:scale-150 transition-all duration-300" key={index} src={tech.iconLink} alt={tech.name} />
         ))}
       </div>
 

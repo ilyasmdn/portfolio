@@ -78,6 +78,7 @@ export const about = {
     },
     technologies: {
       title: "Technologies",
+      description: "Mon stack technologique : l’alliance parfaite de puissance, précision et innovation.",
       list: [
         {
           name: "HTML",
@@ -215,6 +216,7 @@ export const about = {
     },
         technologies: {
       title: "Technologies",
+      description: "My tech stack: the perfect mix of power, precision, and innovation.",
       list: [
         {
           name: "HTML",
