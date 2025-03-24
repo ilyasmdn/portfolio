@@ -1,5 +1,3 @@
-import type React from "react"
-
 import { useState, useRef, useEffect } from "react"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { useMediaQuery } from "@/hooks/use-media-query"
@@ -31,9 +29,9 @@ export default function InfiniteTechScrollAlt({ technologies }: InfiniteTechScro
   }, [isPaused])
 
   // Handle touch start (press) on mobile
-  const handleTouchStart = (index: number) => (e: React.TouchEvent) => {
+  const handleTouchStart = (index: number) => () => {
     if (isMobile) {
-      e.preventDefault() // Prevent default touch behavior
+      // Remove the preventDefault() call that's causing the error
       setSelectedTech(index)
       setIsPaused(true)
     }
@@ -111,3 +109,4 @@ export default function InfiniteTechScrollAlt({ technologies }: InfiniteTechScro
     </div>
   )
 }
+
