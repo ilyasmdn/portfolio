@@ -28,17 +28,30 @@ export default function InfiniteTechScrollAlt({ technologies }: InfiniteTechScro
     setAnimationPlayState(isPaused ? "paused" : "running")
   }, [isPaused])
 
-  // Handle touch start (press) on mobile
-  const handleTouchStart = (index: number) => () => {
+  // Handle pointer down (press) event
+  const handlePointerDown = (index: number) => (e: React.PointerEvent) => {
     if (isMobile) {
+      // Set the pointer capture to prevent other events
+      e.currentTarget.setPointerCapture(e.pointerId)
       setSelectedTech(index)
       setIsPaused(true)
     }
   }
 
-  // Handle touch end (release) on mobile
-  const handleTouchEnd = () => {
+  // Handle pointer up (release) event
+  const handlePointerUp = (e: React.PointerEvent) => {
     if (isMobile) {
+      // Release the pointer capture
+      e.currentTarget.releasePointerCapture(e.pointerId)
+      setSelectedTech(null)
+      setIsPaused(false)
+    }
+  }
+
+  // Handle pointer cancel event
+  const handlePointerCancel = (e: React.PointerEvent) => {
+    if (isMobile) {
+      e.currentTarget.releasePointerCapture(e.pointerId)
       setSelectedTech(null)
       setIsPaused(false)
     }
@@ -75,28 +88,25 @@ export default function InfiniteTechScrollAlt({ technologies }: InfiniteTechScro
           {duplicatedTechnologies.map((tech, index) => (
             <Tooltip key={index} open={isMobile ? selectedTech === index : undefined}>
               <TooltipTrigger asChild>
-                <img
-                  className="w-14 h-14 md:w-20 md:h-20 shrink-0 
-                    dark:md:brightness-30 dark:md:saturate-30 dark:md:hover:brightness-100 dark:md:hover:saturate-100 
-                    md:brightness-90 md:saturate-75 md:hover:brightness-100 md:hover:saturate-100 
-                    md:hover:scale-150 transition-all duration-300
-                    select-none touch-none"
-                  style={{
-                    WebkitTouchCallout: "none", // iOS Safari
-                    WebkitUserSelect: "none", // Safari
-                    KhtmlUserSelect: "none", // Konqueror HTML
-                    MozUserSelect: "none", // Firefox
-                    msUserSelect: "none", // Internet Explorer/Edge
-                    userSelect: "none", // Non-prefixed version
-                    pointerEvents: "auto", // Ensure we still get pointer events
-                  }}
-                  src={tech.iconLink || "/placeholder.svg"}
-                  alt={tech.name}
-                  onTouchStart={handleTouchStart(index)}
-                  onTouchEnd={handleTouchEnd}
-                  onTouchCancel={handleTouchEnd}
-                  draggable="false"
-                />
+                {/* Wrapper div to handle pointer events */}
+                <div
+                  className="relative touch-none select-none"
+                  onPointerDown={handlePointerDown(index)}
+                  onPointerUp={handlePointerUp}
+                  onPointerCancel={handlePointerCancel}
+                  onContextMenu={(e) => e.preventDefault()} // This prevents context menu
+                >
+                  <img
+                    className="w-14 h-14 md:w-20 md:h-20 shrink-0 
+                      dark:md:brightness-30 dark:md:saturate-30 dark:md:hover:brightness-100 dark:md:hover:saturate-100 
+                      md:brightness-90 md:saturate-75 md:hover:brightness-100 md:hover:saturate-100 
+                      md:hover:scale-150 transition-all duration-300
+                      pointer-events-none" // Disable pointer events on the image itself
+                    src={tech.iconLink || "/placeholder.svg"}
+                    alt={tech.name}
+                    draggable="false"
+                  />
+                </div>
               </TooltipTrigger>
               <TooltipContent className="bg-text">
                 <p className="font-bold text-base text-background">{tech.name}</p>
