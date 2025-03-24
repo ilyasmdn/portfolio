@@ -31,7 +31,6 @@ export default function InfiniteTechScrollAlt({ technologies }: InfiniteTechScro
   // Handle touch start (press) on mobile
   const handleTouchStart = (index: number) => () => {
     if (isMobile) {
-      // Remove the preventDefault() call that's causing the error
       setSelectedTech(index)
       setIsPaused(true)
     }
@@ -80,12 +79,23 @@ export default function InfiniteTechScrollAlt({ technologies }: InfiniteTechScro
                   className="w-14 h-14 md:w-20 md:h-20 shrink-0 
                     dark:md:brightness-30 dark:md:saturate-30 dark:md:hover:brightness-100 dark:md:hover:saturate-100 
                     md:brightness-90 md:saturate-75 md:hover:brightness-100 md:hover:saturate-100 
-                    md:hover:scale-150 transition-all duration-300"
+                    md:hover:scale-150 transition-all duration-300
+                    select-none touch-none"
+                  style={{
+                    WebkitTouchCallout: "none", // iOS Safari
+                    WebkitUserSelect: "none", // Safari
+                    KhtmlUserSelect: "none", // Konqueror HTML
+                    MozUserSelect: "none", // Firefox
+                    msUserSelect: "none", // Internet Explorer/Edge
+                    userSelect: "none", // Non-prefixed version
+                    pointerEvents: "auto", // Ensure we still get pointer events
+                  }}
                   src={tech.iconLink || "/placeholder.svg"}
                   alt={tech.name}
                   onTouchStart={handleTouchStart(index)}
                   onTouchEnd={handleTouchEnd}
                   onTouchCancel={handleTouchEnd}
+                  draggable="false"
                 />
               </TooltipTrigger>
               <TooltipContent className="bg-text">
