@@ -147,7 +147,7 @@
 }
 
 .dropdown-btn {
-  @apply text-sm font-bold px-4 py-2 border-secondary border text-text rounded-md hover:shadow-[0_5px_40px_0px_secondary] shadow-secondary transition outline-none cursor-pointer;
+  @apply border-secondary border text-text rounded-md hover:shadow-[0_5px_40px_0px_secondary] shadow-secondary transition outline-none cursor-pointer;
 }
 
 .section-title {

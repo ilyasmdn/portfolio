@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Languages } from "lucide-react";
 import { Button } from "./ui/button";
 
 type Language = "en" | "fr";
@@ -64,15 +64,21 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
       {/* Desktop Language Dropdown */}
       <div className="hidden md:flex md:items-center md:gap-8">
         <Button
-          className="h-9 w-9 rounded-full text-text transition-all"
+          className="h-9 w-9 rounded-full text-text cursor-pointer transition-all"
           onClick={toggleTheme}
           variant="outline"
         >
           {theme === "light" ? <Moon /> : <Sun />}
         </Button>
         <DropdownMenu>
-          <DropdownMenuTrigger className="dropdown-btn">
-            {btnContent}
+          <DropdownMenuTrigger>
+          <Button
+            className="h-9 w-9 rounded-full text-text cursor-pointer transition-all"
+            onClick={toggleTheme}
+            variant="outline"
+          >
+            <Languages />
+          </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="text-text bg-background border border-secondary rounded-lg shadow-md p-2">
             <DropdownMenuLabel className="text-text font-bold">
