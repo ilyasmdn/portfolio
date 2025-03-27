@@ -61,7 +61,7 @@ export default function Timeline() {
             <div
               className={`absolute left-4 lg:left-1/2 transform lg:-translate-x-1/2 w-8 h-8 rounded-full flex items-center justify-center z-10 cursor-pointer transition-all duration-300 ${
                 activeItem === item.id
-                  ? "bg-primary text-white scale-125 shadow-lg"
+                  ? "bg-accent text-white scale-125 shadow-lg"
                   : "bg-background text-accent border-2 border-accent hover:scale-110"
               }`}
               onClick={() => handleItemClick(item.id)}
