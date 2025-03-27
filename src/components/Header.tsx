@@ -25,7 +25,6 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   const { language, toggleLanguage } = useContext(LanguageContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const links = header[language].links;
-  const btnContent = header[language].languageText.btnContent;
   const dropdownContent = header[language].languageText.dropdownContent;
 
   const handleLanguageChange = (e: React.MouseEvent) => {
