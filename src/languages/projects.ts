@@ -1,9 +1,6 @@
 export const projects = {
   fr: {
     title: "Projets",
-    openButton: "Ouvrir le Projet",
-    activeButton: "Aperçu",
-    notActiveButton: "Indisponible",
     list: [
       {
         name: "Portfolio.tsx",
@@ -15,6 +12,10 @@ export const projects = {
         link: "https://github.com/ilyasmdn/portfolio",
         isLinkActive: true,
         inProgress: false,
+        openButton: "Ouvrir le Projet",
+        activeButton: "Aperçu",
+        notActiveButton: "Indisponible",
+        inProgressButton: "En développement",
       },
       {
         name: "WeatherApp.jsx",
@@ -26,6 +27,10 @@ export const projects = {
         link: "#",
         isLinkActive: false,
         inProgress: false,
+        openButton: "Ouvrir le Projet",
+        activeButton: "Aperçu",
+        notActiveButton: "Indisponible",
+        inProgressButton: "En développement",
       },
       {
         name: "TaskManager.jsx",
@@ -37,6 +42,10 @@ export const projects = {
         link: "#",
         isLinkActive: false,
         inProgress: false,
+        openButton: "Ouvrir le Projet",
+        activeButton: "Aperçu",
+        notActiveButton: "Indisponible",
+        inProgressButton: "En développement",
       },
       {
         name: "ChatApp.jsx",
@@ -48,14 +57,15 @@ export const projects = {
         link: "#",
         isLinkActive: false,
         inProgress: true,
+        openButton: "Ouvrir le Projet",
+        activeButton: "Aperçu",
+        notActiveButton: "Indisponible",
+        inProgressButton: "En développement",
       },
     ],
   },
   en: {
     title: "Projects",
-    openButton: "Open Project",
-    activeButton: "Preview",
-    notActiveButton: "Not Available",
     list: [
       {
         name: "Portfolio.tsx",
@@ -67,6 +77,10 @@ export const projects = {
         link: "https://github.com/ilyasmdn/portfolio",
         isLinkActive: true,
         inProgress: false,
+        openButton: "Open Project",
+        activeButton: "Preview",
+        notActiveButton: "Not Available",
+        inProgressButton: "In Progress",
       },
       {
         name: "WeatherApp.jsx",
@@ -78,6 +92,10 @@ export const projects = {
         link: "#",
         isLinkActive: false,
         inProgress: false,
+        openButton: "Open Project",
+        activeButton: "Preview",
+        notActiveButton: "Not Available",
+        inProgressButton: "In Progress",
       },
       {
         name: "TaskManager.jsx",
@@ -89,6 +107,10 @@ export const projects = {
         link: "#",
         isLinkActive: false,
         inProgress: false,
+        openButton: "Open Project",
+        activeButton: "Preview",
+        notActiveButton: "Not Available",
+        inProgressButton: "In Progress",
       },
       {
         name: "ChatApp.jsx",
@@ -100,6 +122,10 @@ export const projects = {
         link: "#",
         isLinkActive: false,
         inProgress: true,
+        openButton: "Open Project",
+        activeButton: "Preview",
+        notActiveButton: "Not Available",
+        inProgressButton: "In Progress",
       },
     ],
   },

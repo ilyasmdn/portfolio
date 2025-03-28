@@ -27,6 +27,10 @@ interface Project {
   link: string;
   isLinkActive: boolean;
   inProgress: boolean;
+  openButton:string,
+  activeButton: string,
+  notActiveButton: string,
+  inProgressButton: string,
 }
 
 interface ProjectComponentProps {
@@ -65,7 +69,7 @@ const ProjectFile: React.FC<ProjectComponentProps> = ({ project }) => {
               variant="outline"
               className="w-full text-text font-semibold py-1 rounded-md text-xs cursor-pointer"
             >
-              Open Project
+              {project.openButton}
             </Button>
           </DialogTrigger>
           <DialogContent>
@@ -89,7 +93,9 @@ const ProjectFile: React.FC<ProjectComponentProps> = ({ project }) => {
             </div>
             <DialogFooter>
               {project.inProgress 
-              ? (<p className="text-orange-500 text-sm">In Progress</p>) 
+              ? (<p className="text-orange-500 text-sm">
+                {project.inProgressButton}
+              </p>) 
               : (project.isLinkActive ? (
                 <Button 
                 asChild
@@ -101,11 +107,11 @@ const ProjectFile: React.FC<ProjectComponentProps> = ({ project }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View Project
+                    {project.activeButton}
                   </a>
                 </Button>
               ) : (
-                <p className="text-red-500 text-sm">Project not available</p>
+                <p className="text-red-500 text-sm">{project.notActiveButton}</p>
               ))
               }
             </DialogFooter>
