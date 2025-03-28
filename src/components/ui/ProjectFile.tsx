@@ -26,6 +26,7 @@ interface Project {
   tech: string[];
   link: string;
   isLinkActive: boolean;
+  inProgress: boolean;
 }
 
 interface ProjectComponentProps {
@@ -87,7 +88,9 @@ const ProjectFile: React.FC<ProjectComponentProps> = ({ project }) => {
               ))}
             </div>
             <DialogFooter>
-              {project.isLinkActive ? (
+              {project.inProgress 
+              ? (<p className="text-orange-500 text-sm">In Progress</p>) 
+              : (project.isLinkActive ? (
                 <Button 
                 asChild
                 variant="outline"
@@ -103,7 +106,8 @@ const ProjectFile: React.FC<ProjectComponentProps> = ({ project }) => {
                 </Button>
               ) : (
                 <p className="text-red-500 text-sm">Project not available</p>
-              )}
+              ))
+              }
             </DialogFooter>
           </DialogContent>
         </Dialog>
