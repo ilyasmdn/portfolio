@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import { useEffect, useState } from "react";
+import Projects from "./components/Projects";
 
 
 type Theme = 'light' | 'dark';
@@ -30,6 +31,7 @@ const App = () => {
       <main className="px-4 sm:px-8 md:px-12 lg:px-20">
         <Hero />
         <About />
+        <Projects />
       </main>
     </>
   );

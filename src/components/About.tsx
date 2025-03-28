@@ -12,19 +12,21 @@ const About = () => {
   return (
     <section id="about" className="flex flex-col items-center gap-16 py-20">
       <h2 className="section-title">{aboutContent.title}</h2>
-      <div className="flex flex-col items-left relative border border-secondary p-6 pt-8 pb-16 md:p-10 rounded-2xl">
+      <div className="section-container flex flex-col items-left relative">
         <h3 className="section-subtitle">
           <GraduationCap />
           {aboutContent.education.title}
         </h3>
-      <Timeline />
+        <Timeline />
       </div>
       <div className="w-full flex flex-col items-left relative border border-secondary p-6 md:p-10 rounded-2xl">
         <h3 className="section-subtitle mb-12!">
-        <BookOpen />
+          <BookOpen />
           {aboutContent.technologies.title}
         </h3>
-        <p className="text-text text-base text-center md:text-lg mb-6">{aboutContent.technologies.description}</p>
+        <p className="text-text text-base text-center md:text-lg mb-6">
+          {aboutContent.technologies.description}
+        </p>
         <Technologies />
       </div>
     </section>
