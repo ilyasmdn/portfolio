@@ -1,12 +1,28 @@
 import React from "react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";  // Import ShadCN components
-import { Button } from "./button"; // Assuming you're using your custom button component
-import { FolderOpen } from "lucide-react"; // File icon
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "./button";
+import { FolderOpen } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface Project {
   name: string;
   type: string;
   description: string;
+  details: string;
   tech: string[];
   link: string;
   isLinkActive: boolean;
@@ -21,13 +37,13 @@ const ProjectFile: React.FC<ProjectComponentProps> = ({ project }) => {
     <Card className="bg-background border border-secondary shadow-lg">
       <CardHeader className="flex items-center gap-2">
         <FolderOpen className="text-primary w-5 h-5" />
-        <CardTitle className="text-accent">
-          {project.name}
-        </CardTitle>
+        <CardTitle className="text-accent">{project.name}</CardTitle>
       </CardHeader>
 
       <CardContent>
-        <p className="text-gray-400 text-sm line-clamp-2">{project.description}</p>
+        <p className="text-text/80 text-sm line-clamp-2">
+          {project.description}
+        </p>
 
         <div className="flex flex-wrap gap-1 mt-3">
           {project.tech.map((tech, index) => (
@@ -42,20 +58,55 @@ const ProjectFile: React.FC<ProjectComponentProps> = ({ project }) => {
       </CardContent>
 
       <CardFooter>
-        <Button 
-          asChild
-          variant={project.isLinkActive ? "outline" : "ghost"}
-          className={`w-full ${project.isLinkActive ? " text-text" : "text-text/60! cursor-not-allowed bg-secondary/20 hover:bg-secondary/20!"} font-semibold py-1 rounded-md text-xs`}
-        >
-          <a 
-            href={project.link} 
-            onClick={(e) => {e.preventDefault()}} 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            Open Project
-          </a>
-        </Button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button
+              variant="outline"
+              className="w-full text-text font-semibold py-1 rounded-md text-xs cursor-pointer"
+            >
+              Open Project
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle className="text-accent text-lg font-semibold">
+                {project.name}
+              </DialogTitle>
+              <DialogDescription className="text-text/80 text-sm">
+                {project.details}
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {project.tech.map((tech, index) => (
+                <span
+                  key={index}
+                  className="px-2 py-1 text-xs bg-secondary rounded-md text-text"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <DialogFooter>
+              {project.isLinkActive ? (
+                <Button 
+                asChild
+                variant="outline"
+                className="text-text font-semibold py-1 rounded-md text-xs cursor-pointer"
+                >
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Project
+                  </a>
+                </Button>
+              ) : (
+                <p className="text-red-500 text-sm">Project not available</p>
+              )}
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </CardFooter>
     </Card>
   );
