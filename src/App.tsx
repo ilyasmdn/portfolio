@@ -4,6 +4,7 @@ import About from "./components/About";
 import { useEffect, useState } from "react";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer"
 
 
 type Theme = 'light' | 'dark';
@@ -35,6 +36,7 @@ const App = () => {
         <Projects />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 };
