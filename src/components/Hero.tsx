@@ -44,7 +44,7 @@ const Hero = () => {
         </Button>
       </div>
       <div className="relative w-full md:w-1/2 rounded-full max-w-52 md:max-w-96 overflow-hidden shadow-xl">
-        <img src={person} alt="Ilyas" className="object-cover" />
+        <img src={person} alt="Web developer" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-tr from-primary/80 to-transparent mix-blend-overlay"></div>
       </div>
     </section>

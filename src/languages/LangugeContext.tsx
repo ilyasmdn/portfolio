@@ -19,6 +19,7 @@ export const LanguageProvider: React.FC<Props> = ({ children }) => {
 
   const toggleLanguage = (lang: Language) => {
     setLanguage(lang);
+    document.documentElement.lang = lang;
   };
 
   return (

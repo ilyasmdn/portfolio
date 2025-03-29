@@ -40,13 +40,13 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   };
 
   return (
-    <header className="flex items-center justify-between fixed top-0 p-2 px-4 sm:px-8 md:px-12 lg:px-20 bg-background border-secondary border-b w-full z-50 transition-all duration-500">
+    <header role="banner" className="flex items-center justify-between fixed top-0 p-2 px-4 sm:px-8 md:px-12 lg:px-20 bg-background border-secondary border-b w-full z-50 transition-all duration-500">
       <h1 className="text-text font-extrabold text-2xl sm:text-3xl md:text-4xl">
         IlyasDev<span className="text-primary">.</span>
       </h1>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:block">
+      <nav role="navigation" className="hidden md:block">
         <ul className="flex gap-6 lg:gap-12">
           {links.map((link, index) => {
             return (
@@ -65,17 +65,18 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
         <Button
           className="h-9 w-9 rounded-full text-text cursor-pointer transition-all"
           onClick={toggleTheme}
+          aria-label="Toggle dark/light theme"
           variant="outline"
-        >
+          >
           {theme === "light" ? <Moon /> : <Sun />}
         </Button>
         <DropdownMenu>
           <DropdownMenuTrigger>
           <Button
             className="h-9 w-9 rounded-full text-text cursor-pointer transition-all"
-            onClick={toggleTheme}
+            aria-label="Change language"
             variant="outline"
-          >
+            >
             <Languages />
           </Button>
           </DropdownMenuTrigger>
@@ -88,14 +89,14 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
               data-lang="en"
               className="text-text font-semibold hover:bg-secondary px-3 py-2 rounded-md cursor-pointer"
               onClick={(e) => handleLanguageChange(e)}
-            >
+              >
               English
             </DropdownMenuItem>
             <DropdownMenuItem
               data-lang="fr"
               className="text-text font-semibold hover:bg-secondary px-3 py-2 rounded-md cursor-pointer"
               onClick={(e) => handleLanguageChange(e)}
-            >
+              >
               Français
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -108,12 +109,13 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
           className="md:hidden text-text p-2"
           onClick={toggleMenu}
           aria-label="Toggle menu"
-        >
+          >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         <Button
           className=" md:hidden h-9 w-9 rounded-full text-text transition-all"
           onClick={toggleTheme}
+          aria-label="Toggle dark/light theme"
           variant="outline"
         >
           {theme === "light" ? <Moon /> : <Sun />}
@@ -124,7 +126,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 top-[57px] bg-background z-40 border-t border-secondary">
           <div className="flex flex-col h-full p-4">
-            <nav className="mb-8">
+            <nav role="navigation" className="mb-8">
               <ul className="flex flex-col gap-4">
                 {links.map((link, index) => (
                   <li key={index}>

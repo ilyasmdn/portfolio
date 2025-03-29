@@ -14,7 +14,7 @@ const Footer = () => {
   const links = header[language].links
 
   return (
-    <footer className="bg-background text-text py-18">
+    <footer role="contentinfo" className="bg-background text-text py-18">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Navigation Links */}

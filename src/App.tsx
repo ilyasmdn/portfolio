@@ -30,7 +30,7 @@ const App = () => {
   return (
     <>
       <Header toggleTheme={toggleTheme} theme={theme} />
-      <main className="px-4 sm:px-8 md:px-12 lg:px-20">
+      <main role="main" className="px-4 sm:px-8 md:px-12 lg:px-20">
         <Hero />
         <About />
         <Projects />

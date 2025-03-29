@@ -90,7 +90,7 @@ export default function InfiniteTechScrollAlt({ technologies }: InfiniteTechScro
                     userSelect: "none", // Non-prefixed version
                     pointerEvents: "auto", // Ensure we still get pointer events
                   }}
-                  src={tech.iconLink || "/placeholder.svg"}
+                  src={tech.iconLink}
                   alt={tech.name}
                   onTouchStart={handleTouchStart(index)}
                   onTouchEnd={handleTouchEnd}

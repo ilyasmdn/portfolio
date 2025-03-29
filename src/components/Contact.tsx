@@ -88,6 +88,7 @@ const Contact = () => {
               {contactContent.inputs[0].label}
             </label>
             <input
+              aria-label="User Name"
               name="name"
               type="text"
               value={form.name}
@@ -101,6 +102,7 @@ const Contact = () => {
               {contactContent.inputs[1].label}
             </label>
             <input
+              aria-label="User Email"
               name="email"
               type="email"
               value={form.email}
@@ -114,6 +116,7 @@ const Contact = () => {
               {contactContent.inputs[2].label}
             </label>
             <textarea
+              aria-label="User Message"
               rows={7}
               name="message"
               value={form.message}
