@@ -59,6 +59,7 @@ export default function Timeline() {
           <div key={item.id} className="relative">
             {/* Timeline dot */}
             <div
+            aria-label="timeline dot"
               className={`absolute left-4 lg:left-1/2 transform lg:-translate-x-1/2 w-8 h-8 rounded-full flex items-center justify-center z-10 cursor-pointer transition-all duration-300 ${
                 activeItem === item.id
                   ? "bg-accent text-white scale-125 shadow-lg"
@@ -95,13 +96,13 @@ export default function Timeline() {
             >
               {/* Year badge */}
               <div className="flex items-center mb-2">
-                <Calendar className="w-4 h-4 mr-2 text-secondary" />
-                <span className="text-sm text-secondary">{item.year}</span>
+                <Calendar className="w-4 h-4 mr-2 text-text/60" />
+                <span className="text-sm text-text/60">{item.year}</span>
               </div>
 
               {/* Title */}
               <h3 className="text-lg font-semibold text-text">{item.title}</h3>
-              <p className="text-[var(--color-secondary)]">{item.institution}</p>
+              <p className="text-text/60">{item.institution}</p>
 
               {/* Card (visible on hover/click) */}
               <div
@@ -114,7 +115,7 @@ export default function Timeline() {
                 <Card className="bg-background border border-secondary shadow-lg">
                   <CardHeader>
                     <CardTitle className="text-accent">{item.title}</CardTitle>
-                    <CardDescription className="text-secondary">
+                    <CardDescription className="text-text/60">
                       {item.institution} • {item.year}
                     </CardDescription>
                   </CardHeader>

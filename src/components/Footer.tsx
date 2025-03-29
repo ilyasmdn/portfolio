@@ -14,7 +14,7 @@ const Footer = () => {
   const links = header[language].links
 
   return (
-    <footer role="contentinfo" className="bg-background text-text py-18">
+    <footer id="footer" role="contentinfo" className="bg-background text-text py-18">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Navigation Links */}
@@ -30,13 +30,13 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex space-x-4">
-            <a href="https://github.com/ilyasmdn/" className="hover:text-accent transition">
+            <a href="https://github.com/ilyasmdn/" aria-label="github link" className="hover:text-accent transition">
               <FontAwesomeIcon icon={faGithub} className="text-xl" />
             </a>
-            <a className="hover:text-accent transition">
+            <a href="#footer" aria-label="linkedin link" className="hover:text-accent transition">
               <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
             </a>
-            <a className="hover:text-accent transition">
+            <a href="#footer" aria-label="twitter link" className="hover:text-accent transition">
               <FontAwesomeIcon icon={faTwitter} className="text-xl" />
             </a>
           </div>
