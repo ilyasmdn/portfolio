@@ -4,9 +4,7 @@
 
 - [Description](#description)
 - [Technologies](#technologies)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Contributing](#contributing)
+- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Description
@@ -15,75 +13,27 @@ This project is a personal portfolio website designed to showcase my skills, pro
 
 The portfolio is built using modern web technologies like React, Tailwind CSS, and TypeScript to ensure a responsive, visually appealing, and highly functional user experience. It also features smooth navigation, clean design, and a dark-light mode toggle to enhance usability.
 
-
 ## Technologies
 
 This portfolio utilizes the following technologies:
 
-- **React**: A JavaScript library for building user interfaces. Used for creating dynamic and interactive web pages.
-- **TypeScript**: A statically typed superset of JavaScript that enhances development with better tooling and fewer runtime errors.
-- **Tailwind CSS**: A utility-first CSS framework that allows for rapid UI development with a focus on customization and responsiveness.
-- **Vite**: A modern build tool that offers fast performance and optimized development workflows.
-- **GitHub Pages**: A hosting service to deploy the portfolio, ensuring easy access and visibility.
-- **Lucide React**: A collection of open-source icons, used to enhance the user interface with clean, scalable vector icons.
-- **Shadcn/ui**: A UI component library that provides pre-designed, customizable components to streamline the development process and improve the visual quality of the website.
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A statically typed superset of JavaScript.
+- **Tailwind CSS**: A utility-first CSS framework.
+- **Vite**: A modern build tool.
+- **GitHub Pages**: Hosting for the portfolio.
+- **Lucide React**: A collection of scalable vector icons.
+- **Shadcn/ui**: A UI component library.
 
-## Setup
+## License
 
-### Prerequisites
+This portfolio is licensed under **All Rights Reserved**.
 
-Make sure you have the following installed:
+You may view this portfolio online, but you are not permitted to:
+- Copy, modify, distribute, or create derivative works from the code.
+- Use the code for commercial purposes.
 
-- Node.js (>= 14.x.x)
-- npm (>= 6.x.x) or yarn (>= 1.x.x)
-
-### Installation
-
-1. Clone this repository to your local machine:
-   ```bash
-   git clone https://github.com/ilyasmdn/portfolio.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd portfolio
-   ```
-
-3. Install the required dependencies:
-   ```bash
-   npm install
-   ```
-   or if you're using yarn:
-   ```bash
-   yarn install
-   ```
-
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
-   or:
-   ```bash
-   yarn dev
-   ```
-
-   This will start the app at `http://localhost:3000`.
-
-## Usage
-
-Once the development server is running, open your browser and navigate to `http://localhost:3000`. You can interact with the project and make any desired changes in the source code.
-
-## Contributing
-
-We welcome contributions to this project! To contribute:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-branch`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to your branch (`git push origin feature-branch`)
-5. Open a Pull Request
-
-Please ensure that your changes follow the existing style guide and include tests if applicable.
+For more details, please refer to the license file in the repository.
 
 ## Acknowledgements
 
