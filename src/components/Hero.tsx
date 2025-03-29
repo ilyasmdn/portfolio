@@ -3,7 +3,7 @@ import { hero } from "@/languages/hero";
 import { useContext } from "react";
 import LanguageContext from "@/languages/LangugeContext";
 import { MailOpen } from "lucide-react";
-import person from "@/assets/person.png";
+import person from "@/assets/person.webp";
 
 const Hero = () => {
   const { language } = useContext(LanguageContext);
