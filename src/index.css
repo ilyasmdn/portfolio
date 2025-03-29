@@ -3,6 +3,7 @@
 
 * {
   font-family: "Quicksand", sans-serif;
+  user-select: none;
 }
 
 @custom-variant dark (&:is(.dark *));
