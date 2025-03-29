@@ -30,13 +30,13 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-accent transition">
+            <a href="https://github.com/ilyasmdn/" className="hover:text-accent transition">
               <FontAwesomeIcon icon={faGithub} className="text-xl" />
             </a>
-            <a href="#" className="hover:text-accent transition">
+            <a className="hover:text-accent transition">
               <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
             </a>
-            <a href="#" className="hover:text-accent transition">
+            <a className="hover:text-accent transition">
               <FontAwesomeIcon icon={faTwitter} className="text-xl" />
             </a>
           </div>
