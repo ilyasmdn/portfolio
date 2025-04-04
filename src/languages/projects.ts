@@ -24,8 +24,8 @@ export const projects = {
         details:
           "Cette application permet aux utilisateurs de rechercher la météo actuelle et les prévisions des prochains jours en fonction de leur localisation. Elle utilise l'API OpenWeather pour récupérer des données précises et offre un affichage visuel moderne avec des animations.",
         tech: ["React", "Tailwind", "OpenWeather API"],
-        link: "#",
-        isLinkActive: false,
+        link: "https://ilyas-weather-app.vercel.app/",
+        isLinkActive: true,
         inProgress: false,
         openButton: "Ouvrir le Projet",
         activeButton: "Aperçu",
