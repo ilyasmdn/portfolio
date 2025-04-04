@@ -89,8 +89,8 @@ export const projects = {
         details:
           "This application allows users to check current weather conditions and upcoming forecasts based on their location. It uses the OpenWeather API to fetch accurate data and features a modern visual representation with animations.",
         tech: ["React", "Tailwind", "OpenWeather API"],
-        link: "#",
-        isLinkActive: false,
+        link: "https://ilyas-weather-app.vercel.app/",
+        isLinkActive: true,
         inProgress: false,
         openButton: "Open Project",
         activeButton: "Preview",
