@@ -6,7 +6,7 @@ export const LanguageContext = createContext<{
   language: Language;
   toggleLanguage: (lang: Language) => void;
 }>({
-  language: "fr",
+  language: "en",
   toggleLanguage: () => {},
 });
 
