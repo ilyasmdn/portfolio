@@ -62,6 +62,21 @@ export const projects = {
         notActiveButton: "Indisponible",
         inProgressButton: "En développement",
       },
+      {
+        name: "WiseGift",
+        type: "html/css/js",
+        description: "Une application de génération d'idées de cadeaux intelligents.",
+        details:
+          "WiseGift est une application web simple et intuitive qui génère des idées de cadeaux personnalisées à partir de mots-clés. Sans authentification ni paiement, elle se concentre sur une expérience utilisateur rapide et légère. L’API serverless garantit sécurité et performance, même sans backend classique.",
+        tech: ["HTML", "CSS", "JavaScript", "Vercel Serverless Functions"],
+        link: "https://wisegift.vercel.app",
+        isLinkActive: true,
+        inProgress: false,
+        openButton: "Ouvrir le Projet",
+        activeButton: "Aperçu",
+        notActiveButton: "Indisponible",
+        inProgressButton: "En développement",
+      },      
     ],
   },
   en: {
@@ -127,6 +142,21 @@ export const projects = {
         notActiveButton: "Not Available",
         inProgressButton: "In Progress",
       },
+      {
+        name: "WiseGift",
+        type: "html/css/js",
+        description: "A smart gift idea generator web app.",
+        details:
+          "WiseGift is a lightweight web application that suggests personalized gift ideas based on user-entered keywords. It requires no authentication or payments, focusing on a fast and simple user experience. The backend uses secure serverless functions for API handling without a traditional server.",
+        tech: ["HTML", "CSS", "JavaScript", "Vercel Serverless Functions"],
+        link: "https://wisegift.vercel.app",
+        isLinkActive: true,
+        inProgress: false,
+        openButton: "Open Project",
+        activeButton: "Preview",
+        notActiveButton: "Unavailable",
+        inProgressButton: "In Development",
+      },      
     ],
   },
 };
