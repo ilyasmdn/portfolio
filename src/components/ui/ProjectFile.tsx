@@ -62,7 +62,7 @@ const ProjectFile: React.FC<ProjectComponentProps> = ({ project }) => {
         </div>
       </CardContent>
 
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <Dialog>
           <DialogTrigger asChild>
             <Button
