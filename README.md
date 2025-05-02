@@ -21,7 +21,7 @@ This portfolio utilizes the following technologies:
 - **TypeScript**: A statically typed superset of JavaScript.
 - **Tailwind CSS**: A utility-first CSS framework.
 - **Vite**: A modern build tool.
-- **GitHub Pages**: Hosting for the portfolio.
+- **Vercel**: Hosting and deployment platform for the portfolio.
 - **Lucide React**: A collection of scalable vector icons.
 - **Shadcn/ui**: A UI component library.
 
@@ -41,5 +41,5 @@ For more details, please refer to the license file in the repository.
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Vite Documentation](https://vitejs.dev/)
 - [Lucide React Documentation](https://lucide.dev/)
-- [GitHub Pages Documentation](https://pages.github.com/)
+- [Vercel Documentation](https://vercel.com/docs)
 - [Shadcn/ui Documentation](https://ui.shadcn.com/)
