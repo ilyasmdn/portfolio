@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faLinkedin,
-  faTwitter,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { header } from "@/languages/header";
 import LanguageContext from "@/languages/LangugeContext";
@@ -36,8 +36,8 @@ const Footer = () => {
             <a href="https://www.linkedin.com/in/ilyas-elmadni/" target="_blank" aria-label="linkedin link" className="hover:text-accent transition">
               <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
             </a>
-            <a href="#footer" aria-label="twitter link" className="hover:text-accent transition">
-              <FontAwesomeIcon icon={faTwitter} className="text-xl" />
+            <a href="https://x.com/ilyas__mdn" aria-label="X link" className="hover:text-accent transition">
+              <FontAwesomeIcon icon={faXTwitter} className="text-xl" />
             </a>
           </div>
         </div>
