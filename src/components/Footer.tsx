@@ -36,7 +36,7 @@ const Footer = () => {
             <a href="https://www.linkedin.com/in/ilyas-elmadni/" target="_blank" aria-label="linkedin link" className="hover:text-accent transition">
               <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
             </a>
-            <a href="https://x.com/ilyas__mdn" aria-label="X link" className="hover:text-accent transition">
+            <a href="https://x.com/ilyas__mdn" target="_blank" aria-label="X link" className="hover:text-accent transition">
               <FontAwesomeIcon icon={faXTwitter} className="text-xl" />
             </a>
           </div>
