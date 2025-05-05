@@ -10,6 +10,7 @@ import express from "@/assets/express.svg";
 import postgres from "@/assets/postgres.svg";
 import git from "@/assets/git.svg";
 import github from "@/assets/github.svg";
+import nextjs from "@/assets/nextjs.svg";
 
 import { GraduationCap, BookOpen } from "lucide-react";
 
@@ -104,6 +105,11 @@ export const about = {
           name: "React",
           iconLink: react,
           color: "#61DAFB",
+        },
+        {
+          name: "Next JS",
+          iconLink: nextjs,
+          color: "#000000",
         },
         {
           name: "Tailwind CSS",
