@@ -10,16 +10,6 @@
       ],
       "destination": "https://ilyasmdn.me/:path*",
       "permanent": true
-    },
-    {
-      "source": "http://ilyasmdn.me/:path*",
-      "destination": "https://ilyasmdn.me/:path*",
-      "permanent": true
-    },
-    {
-      "source": "https://www.ilyasmdn.me/:path*",
-      "destination": "https://ilyasmdn.me/:path*",
-      "permanent": true
     }
   ]
 }
