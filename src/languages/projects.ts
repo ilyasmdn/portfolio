@@ -3,6 +3,21 @@ export const projects = {
     title: "Projets",
     list: [
       {
+        name: "Snaphire.ai",
+        type: "fullstack",
+        description: "Un simulateur d’entretien d’embauche alimenté par l’IA avec interaction vocale.",
+        details:
+          "Snaphire simule des entretiens d’embauche en temps réel grâce à une interaction vocale. L’utilisateur saisit le poste visé, et le système lance un entretien avec un recruteur IA via Vapi. À la fin de l’entretien, une évaluation personnalisée est générée grâce à des modèles d’IA avancés. C’est un environnement complet pour s'entraîner, gagner en confiance et améliorer ses compétences en entretien.",
+        tech: ["Next.js", "Tailwind", "Vapi", "Firebase"],
+        link: "https://snaphire.pro/",
+        isLinkActive: true,
+        inProgress: false,
+        openButton: "Ouvrir le projet",
+        activeButton: "Aperçu",
+        notActiveButton: "Indisponible",
+        inProgressButton: "En développement",
+      },
+      {
         name: "Portfolio.tsx",
         type: "tsx",
         description: "Un portfolio personnel moderne construit avec React, TypeScript et Tailwind.",
@@ -76,12 +91,27 @@ export const projects = {
         activeButton: "Aperçu",
         notActiveButton: "Indisponible",
         inProgressButton: "En développement",
-      },      
+      },
     ],
   },
   en: {
     title: "Projects",
     list: [
+      {
+        name: "Snaphire.ai",
+        type: "fullstack",
+        description: "An AI-powered mock interview trainer with voice-based simulation.",
+        details:
+          "Snaphire simulates real-time job interviews using voice interaction. Users input their target role, and the system launches an AI-driven interviewer via Vapi. After the interview, the app generates detailed performance feedback using LLMs. It’s a complete practice environment designed to boost confidence and improve interview skills.",
+        tech: ["Next.js", "Tailwind", "Vapi", "Firebase"],
+        link: "https://snaphire.pro/",
+        isLinkActive: true,
+        inProgress: false,
+        openButton: "Open Project",
+        activeButton: "Preview",
+        notActiveButton: "Unavailable",
+        inProgressButton: "In Development",
+      },
       {
         name: "Portfolio.tsx",
         type: "tsx",
