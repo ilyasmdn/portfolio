@@ -1,7 +1,13 @@
 {
   "redirects": [
     {
-      "source": "http://www.ilyasmdn.me/:path*",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.ilyasmdn.me"
+        }
+      ],
       "destination": "https://ilyasmdn.me/:path*",
       "permanent": true
     },
